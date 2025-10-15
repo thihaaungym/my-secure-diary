@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Secure Diary</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>My Secure Diary</h1>
+        
+        <div class="input-area">
+            <h2>Create New Note</h2>
+            <input type="password" id="password" placeholder="🔑 Enter Your Password">
+            <input type="text" id="noteTitle" placeholder="Enter note title...">
+            <textarea id="noteEditor" placeholder="Write your thoughts here..."></textarea>
+            <button onclick="saveNote()">Save Note</button>
+        </div>
+
+        <hr>
+
+        <h2>My Notes</h2>
+        <div id="notes-container">
+            </div>
+    </div>
+
+    <div id="deleteModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">&times;</span>
+            <h3>Confirm Deletion</h3>
+            <p>Are you sure you want to permanently delete this note titled "<b id="note-title-to-delete"></b>"?</p>
+            <p>To confirm, please enter your password.</p>
+            <input type="password" id="deletePassword" placeholder="🔑 Enter password to confirm">
+            <button id="confirmDeleteButton" class="danger-button">Confirm & Delete</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
